@@ -1,5 +1,6 @@
 # ignore .csv files
 *.csv
 
-# for redundancy, ignore the data folder
+# ignore data and pickles
 data
+pickles
