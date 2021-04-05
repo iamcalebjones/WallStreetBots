@@ -4,7 +4,7 @@
 </p>
 
 # r/WallStreetBots
-## Looking for bot account activity on r/WallStreetBets to evaluate whether fake accounts were involved with generating hype to drive up the price of GameStop stocks.
+## Investigating whether or not bots contributed to the hype that helped drive up the price of GameStop stock in early 2021.
 #### By Caleb Jones
 [LinkedIn](https://www.linkedin.com/in/calebsjones/) | [GitHub](https://github.com/iamcalebjones) | [Presentation Slides](link-coming-later)
 
@@ -12,7 +12,7 @@
 
 Reddit is a place on the internet. [Wikipedia](https://en.wikipedia.org/wiki/Reddit) states it is "a social news aggregation, web content rating, and discussion website" which is grouped into pages called subreddits, or subs, which contain topic-specific content. Reddit users can join specific subs to participate in that community's discussion.
 
-One particular subreddit, called [r/WallStreetBets](https://www.reddit.com/r/wallstreetbets/), exists to discuss stock and options trading. For the last year or so, members there have been speculating about the value of stocks for the company GameStop (GME), a chain of brick and mortar stores that sells consumer electronics and gaming merchandise. Over the last few years, the company has been in decline due to the popularity of games being bought and sold online, and combined with the pandemic and struggle that brought to physical stores, GME was in bad shape. Such bad shape that hedge fund managers took large short positions on the stock, betting the value would continue to decrease, which would make them money. Hedge fung managers were so commmitted to this strategy that the stock was over 100% shorted,
+One particular subreddit, called [r/WallStreetBets](https://www.reddit.com/r/wallstreetbets/), exists to discuss stock and options trading. For the last year or so, members there have been speculating about the value of GameStop (GME) stocks. GameStop is a chain of brick and mortar stores that sells consumer electronics and gaming merchandise. Over the last few years, the company has been in decline due to the popularity of games being bought and sold online, and combined with the pandemic and struggle that brought to physical stores, GME was in bad shape. Such bad shape that hedge fund managers took large short positions on the stock, betting the value would continue to decrease, which would make them money. Hedge fung managers were so commmitted to this strategy that the stock was over 100% shorted. Members of r/WallStreetBets noticed this high short interest ratio, and GME became a frequent topic of discussion on the sup.
 
 ## Natural Language Processing
 
