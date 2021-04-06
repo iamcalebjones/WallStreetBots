@@ -27,17 +27,32 @@ Here are a few details about these two trends:
   - GME hit its peak on January 28th, at $483 per share
   - r/WallStreetBets also saw its peak daily posts contributed on January 28th, 28119 individual posts
 
+Focusing on January 28th for a moment, there was a particularly high occurence of emojis, The following emojis showed up the most on this day:
 
+  - 🚀&nbsp; had 4476 uses
+  - 💎&nbsp; had 200 uses
+  - 🦍&nbsp; had 100 uses
+  - 🙌&nbsp; had 73 uses
+
+A typical post incorporating emojis looks like "To the moon!!! 🚀🚀🚀🚀🚀🚀🚀🚀🚀&nbsp; we have 💎💎💎🙌!" The 💎💎💎🙌 emoji combination is known as 'diamond hands' which users who were holding shares of GME said in reference to holding stocks that were suddenly so valuable. "To the moon" was said in reference to users wanting to see the stock continue to rise, and many believe $1,000 per share was possible. 
+
+Although the stock hasn't reached that price, several frequent contributors to the subreddit managed to make massive money on January 28th. Mike McCaskill held 750 $60 call optios which he exited at a price of $347 per share and walked away with $25 million. Reddit user u/DeepF\*ckingValue, who's YouTube name is Roaring Kitty and goes by Keith Gill when not on the internet, had been posting to r/WallStreetBets nearly daily for several weeks with screenshots of his brokerage account and the value that he had amassed. At his peak, he was worth $47 million, but he didn't sell, a true 💎💎💎🙌. In reality, most of his value was due to the long-term options positions he had opened, which expire on April 12th. He's going to wait as long as possible to exercise his options in the hope that the price is as high as possible before he exits.
 
 ## Natural Language Processing
 
-As far as data is concerned, at first I thought it would take a lot of scraping or navigating with the Reddit API to obtain the information, but as it turns out, this topic is suddenly very popular, and someone had already done the legwork and posted it to [Kaggle](https://www.kaggle.com/mattpodolak/rwallstreetbets-posts-and-comments). 
+As far as data is concerned, at first I thought it would take a lot of scraping or navigating with the Reddit API to obtain the information, but as it turns out, this topic is suddenly very popular, and someone had already done the legwork and posted it to [Kaggle](https://www.kaggle.com/mattpodolak/rwallstreetbets-posts-and-comments). The provided data was broken into posts and comments, and the datasets were 915 mb and 3.39 gb, respectively. Because of the size of the datasets, I started off working with the posts data.
 
 I more or less followed the usual steps associated with Natural Language Processing, or NLP. My workflow consisted of removing line breaks, apostrophes, hyperlinks, special characters, and finally numbers. I chose to just remove apostrophes from the contractions instead of expanding them on my first pass through the data, and I felt that the quality of the processed data didn't suffer as a result of this decision. 
 
 A big task with this dataset was handling emojis, because the contributors to r/WallStreetBets frequently use them and they were everywhere in the dataset. What I came up with was a method to translate them to their word descriptions, and adding the word 'emoji-' to the beginning. For example, 🚀&nbsp; is the rocket, but just translating this symbol to 'rocket' would not preserve information that it was initially an emoji, so in my dataset, this became 'emojirocket'. This actually worked pretty well, and in my modeling it was very easy to identify the emojis later on.
 
 Next I lemmatized words, and finally removed stop words. Originally I wanted to also include n-grams to preserve some information about word usage and context, but the size of the dataset was prohibitive. The resulting dataset was too large, both in RAM space and in processing/modeling time, so I proceeded with just single words. 
+
+After running my data through the processing steps outlined above, I built a WordCloud for the sake of the visual. The WordCloud shows the payoff of the previously outlined emoji translation efforts, as it is very easy to see the presence of emojis. Several standouts present here are the emojis for rocket, gemstone, eggplant, and raising hands (the character in 'diamond hands'). Looking a little closer, **the bots have identified themselves aboard the rocket emoji**, right between the 'i' and 'r', surely riding this stock to the moon.
+
+<p align="center">
+  <img src="https://github.com/iamcalebjones/WallStreetBots/blob/main/images/comments_wordcloud.png">
+</p>
 
 ## Modeling
 
